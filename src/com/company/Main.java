@@ -1,5 +1,7 @@
 package com.company;
 
+import sun.text.resources.ga.JavaTimeSupplementary_ga;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,17 +11,31 @@ public class Main {
         double[] dailyAverageTemp = new double[7];
         Scanner userInput = new Scanner(System.in);
         int sum = 0;
-        int  x = 1;
+        int x = 1;
 
         for (int i = 0; i < dailyAverageTemp.length; i++) {
             System.out.println("Enter a temperature for day " + (i + 1) + ": ");
             dailyAverageTemp[i] = userInput.nextDouble();
         }
-        for (double dAT: dailyAverageTemp) {
-            sum += dAT;
-            int avg =sum/x;
-            x++;
-            System.out.println("Daiy Average for the week" + avg);  }
+   //   double Celsum = 0;
+       for (int i = 0; i < dailyAverageTemp.length; i++) {
+    //       Celsum = dailyAverageTemp[i] - 32;
+    //        System.out.println(dailyAverageTemp.length);
+    //        System.out.println("Daily Temperatures in celsius " + Celsum * .56);
+        }
+            for (double dAT : dailyAverageTemp) {
+                sum += dAT;
+                int avg = sum / x;
+                x++;
+                int celsum = avg -32;
+                System.out.println("Daily Average for the week" + avg);
+                System.out.println("Daily Average Temperatures in celsius equals " + celsum * .56);
+                }
+
+
+            }
+        }
+
 
 
  /*       System.out.println("Contents of the array are:" + Arrays.toString(dailyAverageTemp));
@@ -40,14 +56,12 @@ public class Main {
         System.out.println(((dailyAverageTemp[0] + dailyAverageTemp[1] + dailyAverageTemp[2] +
                 dailyAverageTemp[3] + dailyAverageTemp[4] + dailyAverageTemp[5] + dailyAverageTemp[6]) / 7) + " is the daily average for the week");
 
-        double Celsum = 0;
-        for (int i = 0; i < dailyAverageTemp.length; i++) {
-            Celsum = dailyAverageTemp[i] - 32;
-            System.out.println("Daily Temperatures in celsius " + Celsum * 5 / 9); */
+
 
         }
     }
-
+}
+*/
 
 
 
